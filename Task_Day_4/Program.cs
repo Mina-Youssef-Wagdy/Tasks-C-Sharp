@@ -6,23 +6,28 @@ namespace Task_Day_4
     {
         static void Main(string[] args)
         {
-            Employee Employee_1  = new Employee
-            {
-                Id = 1,
-                Name = "Mina Youssef",
-                Department = "web development",
-                Salary = 10000,
-                DOB = new DateTime(2003, 11, 19)
-            };
+            #region Employee_1
+            Employee Employee_1 = new Employee();
 
-            Employee Employee_2 = new Employee
-            {
-                Id = 2,
-                Name = "Rofa Youssef",
-                Department = "IT",
-                Salary = 16000,
-                DOB = new DateTime(2001, 9, 1)
-            };
+            Employee_1.Id = 1;
+            Employee_1.Name = "Mina Youssef";
+            Employee_1.Department = "web development";
+            Employee_1.Salary = 10000;
+            Employee_1.DOB = new DateTime(2003, 11, 19);
+
+            #endregion
+
+            #region Employee_2
+
+            Employee Employee_2 = new Employee();
+
+            Employee_2.Id = 2;
+            Employee_2.Name = "Rofa Youssef";
+            Employee_2.Department = "IT";
+            Employee_2.Salary = 16000;
+            Employee_2.DOB = new DateTime(2001, 9, 1); 
+            #endregion 
+
             Employee_1.PrintData();
             Employee_2.PrintData();
         }
