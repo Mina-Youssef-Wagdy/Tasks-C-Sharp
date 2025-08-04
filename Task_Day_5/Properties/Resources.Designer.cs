@@ -8,9 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Task_4-Day_5.Properties {
     using System;
-    
+
     
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -70,4 +69,4 @@ namespace Task_4-Day_5.Properties {
             }
         }
     }
-}
+
