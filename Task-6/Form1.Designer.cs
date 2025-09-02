@@ -152,6 +152,7 @@
             btnDelete.TabIndex = 10;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnEdit
             // 
@@ -161,6 +162,7 @@
             btnEdit.TabIndex = 10;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // label6
             // 
@@ -186,6 +188,7 @@
             btnShow.TabIndex = 10;
             btnShow.Text = "Show";
             btnShow.UseVisualStyleBackColor = true;
+            btnShow.Click += btnShow_Click;
             // 
             // txtID
             // 
