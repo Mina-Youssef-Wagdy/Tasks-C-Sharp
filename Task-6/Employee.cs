@@ -11,12 +11,12 @@ namespace Task_6
     {
         [Key]
         public int Id { get; set; }
-        [Required,MaxLength(50)]    
-        public string Name { get; set; }   
+        public  string Name { get; set; }   
         [Required,MaxLength(50)]
         public string Job { get; set; }
         [Required]
         public double Salary { get; set; }
+        [Required]  
 
         public byte[] Photo { get; set; }  
 

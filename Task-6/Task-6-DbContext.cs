@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Task_6
 {
-    internal class Task_5_DbContext: DbContext
+    public class Task_6_DbContext : DbContext
     {
 
-        public Task_5_DbContext(DbContextOptions<Task_5_DbContext> Options):base(Options) 
+        public Task_6_DbContext(DbContextOptions<Task_6_DbContext> Options):base(Options) 
         {
             
         }
-        public DbSet<Employee> employees { set; get; }
+        public DbSet<Employee> Employees { set; get; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Employee>(entity =>
@@ -22,7 +22,7 @@ namespace Task_6
                 entity.Property(e => e.Id).HasColumnName("ID");
                 entity.Property(e => e.Job).HasMaxLength(50);
                 entity.Property(e => e.Name).HasMaxLength(50);
-                entity.Property(e => e.Salary);
+                entity.Property(e => e.Salary).HasColumnType("decimal(18,2)").IsRequired();
 
             });
         }
