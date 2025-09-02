@@ -80,6 +80,16 @@ namespace Task_Day_5
         {
             e.Graphics.DrawString(RtxtReport.Text, new Font("Tahoma", 16), Brushes.Blue, 10, 10);
         }
+
+        private void Application_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RtxtReport_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

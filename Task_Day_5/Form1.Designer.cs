@@ -58,8 +58,8 @@
             btnPrint = new Button();
             btnPageSetup = new Button();
             pageSetupDialog1 = new PageSetupDialog();
-            printDialog1 = new PrintDialog();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printDialog1 = new PrintDialog();
             printPreviewDialog1 = new PrintPreviewDialog();
             groupBox1.SuspendLayout();
             Habites.SuspendLayout();
@@ -307,6 +307,7 @@
             RtxtReport.Size = new Size(380, 465);
             RtxtReport.TabIndex = 4;
             RtxtReport.Text = "";
+            RtxtReport.TextChanged += RtxtReport_TextChanged;
             // 
             // btnPreview
             // 
@@ -342,14 +343,14 @@
             // 
             pageSetupDialog1.Document = printDocument1;
             // 
+            // printDocument1
+            // 
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
             // printDialog1
             // 
             printDialog1.Document = printDocument1;
             printDialog1.UseEXDialog = true;
-            // 
-            // printDocument1
-            // 
-            printDocument1.PrintPage += printDocument1_PrintPage;
             // 
             // printPreviewDialog1
             // 
@@ -391,6 +392,7 @@
             Name = "Application";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Application";
+            Load += Application_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             Habites.ResumeLayout(false);
