@@ -95,6 +95,7 @@
             // 
             // txtSalary
             // 
+            txtSalary.BackColor = Color.White;
             txtSalary.Location = new Point(101, 164);
             txtSalary.Name = "txtSalary";
             txtSalary.Size = new Size(300, 27);
@@ -128,6 +129,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(30, 247);
             comboBox1.Name = "comboBox1";
@@ -179,6 +181,7 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(282, 27);
             txtSearch.TabIndex = 6;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // btnShow
             // 
@@ -279,5 +282,6 @@
         private TextBox txtID;
         private DataGridView dataGridView1;
         private Button button1;
+
     }
 }
