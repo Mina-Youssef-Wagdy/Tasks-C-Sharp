@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 
 namespace Task_6
 
@@ -38,14 +40,17 @@ namespace Task_6
         {
             [Key]
             public int Id { get; set; }
-            public string Name { get; set; }
+            [Required, MaxLength(100)]  
+            public string Name { get; set; } = string.Empty;
             [Required, MaxLength(50)]
-            public string Job { get; set; }
+            public string Job { get; set; } = string.Empty;
+
             [Required]
-            public double Salary { get; set; }
+            [Column(TypeName = "decimal(18,2)")]
+            public decimal Salary { get; set; }
             [Required]
 
-            public byte[] Photo { get; set; }
+            public byte[]? Photo { get; set; }
             
         }
     }
